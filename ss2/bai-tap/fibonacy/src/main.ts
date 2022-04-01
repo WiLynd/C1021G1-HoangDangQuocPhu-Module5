@@ -1,7 +1,7 @@
 let sum : number = 0;
 let count: number = 0;
 
-for ( let i = 1; count < 50; i++) {
+for ( let i = 1; count < 30; i++) {
     sum += fibonacy(i);
     count++;
 }
