@@ -2,13 +2,17 @@
   <div>
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label s-text-color-black">Tên dịch vụ</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="VD: PHÒNG SUITE HOÀNG GIA">
+      <input [(ngModel)]="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="VD: PHÒNG SUITE HOÀNG GIA">
     </div>
     <div class="mb-3">
       <label for="exampleFormControlInput2" class="form-label s-text-color-black">Giá dịch vụ</label>
-      <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="VD: 1000$">
+      <input [(ngModel)]="payment" type="number" class="form-control" id="exampleFormControlInput2" placeholder="VD: 1000$">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput3" class="form-label s-text-color-black">Link url image</label>
+      <input [(ngModel)]="url" type="text" class="form-control" id="exampleFormControlInput3">
     </div>
   </div>
   <button type="button" class="btn btn-secondary">Cancel</button>
-  <button type="button" class="btn btn-success">Create</button>
+  <button type="button" class="btn btn-success" (click)="addFacility()">Create</button>
 </div>

@@ -1,0 +1,78 @@
+<div>
+  <form class="form-control">
+    <h1>Register Form</h1>
+    <div class="mb-3 text-lg-end" [formGroup]="registerForm">
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email">
+      <div class="alert alert-danger" role="alert"
+           *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+        Invalid Email
+      </div>
+    </div>
+
+    <div [formGroup]="registerForm">
+      <fieldset formGroupName="pwGroup">
+        <div class="mb-3 text-lg-end">
+          <label for="password">Password:</label>
+          <input id="password" type="text" formControlName="password">
+        </div>
+
+        <div class="mb-3 text-lg-end">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input id="confirmPassword" type="text" formControlName="confirmPassword">
+        </div>
+
+        <div class="alert alert-danger" role="alert"
+             *ngIf="registerForm.hasError('passwordNotMatch',['pwGroup']) && registerForm.get('pwGroup').touched">
+          Password does not match!
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="mb-3 text-lg-end" [formGroup]="registerForm">
+      <label for="country">Country:</label>
+      <select id="country" formControlName="country" required>
+        <option>Việt Nam</option>
+        <option>Trung Quốc</option>
+        <option>Mỹ</option>
+        <option>Pháp</option>
+        <div class="alert alert-danger" role="alert"
+             *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">
+          Required!
+        </div>
+      </select>
+    </div>
+
+    <div class="mb-3 text-lg-end" [formGroup]="registerForm">
+      <label for="age">Age:</label>
+      <input id="age" type="number" formControlName="age">
+      <div class="alert alert-danger" role="alert"
+           *ngIf="registerForm.get('age').invalid && registerForm.get('age').touched">
+        Must over 18 age!
+      </div>
+    </div>
+
+
+    <div class="mb-3 text-lg-end" [formGroup]="registerForm">
+      <label for="gender">Gender:</label>
+      <input id="gender" type="radio" formControlName="gender" value="Nam">Nam
+      <input id="" type="radio" formControlName="gender" value="Nữ">Nữ
+    </div>
+
+
+    <div class="mb-3 text-lg-end" [formGroup]="registerForm">
+      <label for="phone">Phone:</label>
+      <input id="phone" type="email" formControlName="phone">
+      <div class="alert alert-danger" role="alert"
+           *ngIf="registerForm.get('phone').invalid && registerForm.get('phone').touched">
+        Invalid Phone Number! Must have +84xxxxxxxxx!
+      </div>
+    </div>
+
+    <p>Form Status: {{registerForm.status}}</p>
+
+    <div class="mb-3 text-lg-end" [formGroup]="registerForm">
+      <button type="button" [disabled]="!registerForm.valid" (click)="onSubmit()">Submit</button>
+    </div>
+  </form>
+</div>

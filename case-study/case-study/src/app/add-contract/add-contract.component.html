@@ -1,26 +1,30 @@
 <div class="container">
-  <div>
+  <form>
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label s-text-color-black">Tên Khách Hàng</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hoàng Đặng Quốc Phú">
+      <p>Tên Khách Hàng</p>
+      <select class="form-control">
+        <option *ngFor="let customer of customers">{{customer.name}}</option>
+      </select>
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlInput2" class="form-label s-text-color-black">Tên dịch vụ</label>
-      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="VD: PHÒNG SUITE HOÀNG GIA">
+      <p>Tên dịch vụ</p>
+      <select class="form-control">
+        <option *ngFor="let facility of facilities">{{facility.name}}</option>
+      </select>
     </div>
     <div class="mb-3">
-      <span>Ngày Làm Hợp Đồng :</span>
-      <input type="date" placeholder="Start Date">
+      <p>Ngày Làm Hợp Đồng :</p>
+      <input type="date" placeholder="Start Date" class="form-control">
     </div>
     <div class="mb-3">
-      <span>Ngày Kết Thúc Hợp Đồng :</span>
-      <input type="date" placeholder="Start Date">
+      <p>Ngày Kết Thúc Hợp Đồng :</p>
+      <input type="date" placeholder="Start Date" class="form-control">
     </div>
     <div class="mb-3">
-      <label for="exampleFormControlInput3" class="form-label s-text-color-black">Tổng Tiền</label>
+      <p>Đặt cọc</p>
       <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="VD : 1.000.000">
     </div>
-  </div>
+  </form>
   <button type="button" class="btn btn-secondary">Cancel</button>
   <button type="button" class="btn btn-success">Create</button>
 </div>

@@ -14,6 +14,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { AddContractComponent } from './add-contract/add-contract.component';
 import { ListContractComponent } from './list-contract/list-contract.component';
 import { HomeComponent } from './home/home.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
