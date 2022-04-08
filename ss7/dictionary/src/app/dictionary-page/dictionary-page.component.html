@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Từ vựng</th>
+  </tr>
+  <tr *ngFor="let word of iWords; let i=index">
+    <td>{{i+1}}</td>
+    <td>
+      <a routerLink="/translate/{{word.word}}/{{word.mean}}">{{word.word}}</a>
+    </td>
+  </tr>
+</table>
