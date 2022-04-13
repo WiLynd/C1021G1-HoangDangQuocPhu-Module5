@@ -1,3 +1,10 @@
-.container {
+h1 {
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 40px;
+  font-style: initial;
   text-align: center;
+  color: white;
+  padding-top: 280px;
+  height: 600px;
+  background-image: url("https://furamavietnam.com/wp-content/uploads/2018/10/Vietnam_Danang_Furama_Resort_Exterior-Courtyard-Ocean-Pool.jpg?id=2350");
 }

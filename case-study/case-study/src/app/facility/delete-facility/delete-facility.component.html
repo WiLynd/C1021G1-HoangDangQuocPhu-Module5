@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="row">
+    <div>
+      <form [formGroup]="facilityForm" class="form-control form-label">
+        <table class="table">
+          <thead>
+          <th colspan="2" class="text-center"><h2>Chỉnh sửa dịch vụ</h2>
+          </th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>ID</td>
+            <td>
+              <input class="form-control" type="number" formControlName="id">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Tên dịch vụ</td>
+            <td>
+              <input class="form-control" type="text" formControlName="name">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Link ảnh</td>
+            <td>
+              <input class="form-control" type="text" formControlName="img">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Diện tích hồ bơi</td>
+            <td>
+              <input class="form-control" type="number" formControlName="poolArea">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Số tầng</td>
+            <td>
+              <input class="form-control" type="number" formControlName="floor">
+            </td>
+          </tr>
+
+          <tr>
+            <td>Giá tiền</td>
+            <td>
+              <input class="form-control" type="number" formControlName="payment">
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center" colspan="2">
+              <button type="button" class="btn btn-secondary" routerLink="/facility-list">Cancel</button>
+              <button type="button" class="btn btn-secondary" (click)="onNoClick()">Huỷ</button>
+<!--              <button type="button" class="btn btn-primary"-->
+<!--                      (click)="deleteFacility(id)" routerLink="/facility-list">Xoá</button>-->
+              <button (click)="deleteFacility(this.facility.id)" routerLink="/facility-list">Xoá</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

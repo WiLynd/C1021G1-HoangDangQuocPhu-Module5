@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <form [formGroup]="facilityForm" class="form-control form-label">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{facilityForm.value.img}}" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                <tr>
+                  <td>
+                    <h3><strong>{{facilityForm.value.name}}</strong></h3>
+                  </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>
+                    <p>Diện tích hồ bơi: {{facilityForm.value.poolArea}} m2</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Số tầng: {{facilityForm.value.floor}}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Giá tiền: {{facilityForm.value.payment}} VND</p>
+                  </td>
+                </tr>
+                <tr class="text-center">
+                  <td>
+                    <a routerLink="/facility-list" class="btn btn-primary">Trở về</a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

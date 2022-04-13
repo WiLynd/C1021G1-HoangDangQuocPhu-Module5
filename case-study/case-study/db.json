@@ -1,0 +1,136 @@
+{
+  "contract": [
+    {
+      "id": 1,
+      "customerName": "Hoàng Đặng Quốc Phú",
+      "facilityName": "PHÒNG SUITE HƯỚNG BIỂN",
+      "startDay": "04/06/2021",
+      "endDay": "04/06/2022",
+      "prePayment": 30000000
+    },
+    {
+      "id": 2,
+      "customerName": "Dương Công Minh Sơn",
+      "facilityName": "PHÒNG DELUXE HƯỚNG BIỂN",
+      "startDay": "04/06/2021",
+      "endDay": "04/06/2022",
+      "prePayment": 10000000
+    },
+    {
+      "id": 3,
+      "customerName": "Nguyễn Thanh Tâm",
+      "facilityName": "BIỆT THỰ HƯỚNG BIỂN CÓ HỒ BƠI RIÊNG",
+      "startDay": "04/06/2021",
+      "endDay": "04/06/2022",
+      "prePayment": 12000000
+    },
+    {
+      "id": 4,
+      "customerName": "Nguyễn Anh Hoàng",
+      "facilityName": "BIỆT THỰ HƯỚNG VƯỜN CÓ HỒ BƠI RIÊNG",
+      "startDay": "04/06/2021",
+      "endDay": "04/06/2022",
+      "prePayment": 50000000
+    },
+    {
+      "id": 5,
+      "customerName": "Nguyễn Anh Trọng",
+      "facilityName": "PHÒNG PRESIDENT SUITE",
+      "startDay": "04/06/2021",
+      "endDay": "04/06/2022",
+      "prePayment": 20000000
+    }
+  ],
+  "customer": [
+    {
+      "id": 2,
+      "code": "KH-0001",
+      "name": "Hoàng Đặng Quốc Phú",
+      "birthday": "2022-01-01",
+      "idCard": 197291234,
+      "phone": "0942250399",
+      "email": "hdqphu1301@gmail.com",
+      "address": "Quảng Trị"
+    },
+    {
+      "id": 3,
+      "code": "KH-0001",
+      "name": "Hoàng Đặng Quốc Phú",
+      "birthday": "2022-01-01",
+      "idCard": 197291234,
+      "phone": "0942250399",
+      "email": "hdqphu1301@gmail.com",
+      "address": "Quảng Trị"
+    },
+    {
+      "id": 4,
+      "code": "KH-0001",
+      "name": "Hoàng Đặng Quốc Phú",
+      "birthday": "2022-01-01",
+      "idCard": 197291234,
+      "phone": "0942250399",
+      "email": "hdqphu1301@gmail.com",
+      "address": "Quảng Trị"
+    },
+    {
+      "id": 5,
+      "code": "KH-0001",
+      "name": "Hoàng Đặng Quốc Phú",
+      "birthday": "2022-01-01",
+      "idCard": 197291234,
+      "phone": "0942250399",
+      "email": "hdqphu1301@gmail.com",
+      "address": "zz"
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "name": "PHÒNG SUITE HƯỚNG BIỂN",
+      "poolArea": 60,
+      "floor": 2,
+      "payment": 1000000
+    },
+    {
+      "id": 2,
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-F-370x239.jpg",
+      "name": "PHÒNG DELUXE HƯỚNG BIỂN",
+      "poolArea": 60,
+      "floor": 2,
+      "payment": 1000000
+    },
+    {
+      "id": 3,
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Beach_Pool_Villas-_Exterior-1-F-370x239.jpg",
+      "name": "BIỆT THỰ HƯỚNG BIỂN CÓ HỒ BƠI RIÊNG",
+      "poolArea": 60,
+      "floor": 2,
+      "payment": 1000000
+    },
+    {
+      "id": 4,
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-F-370x239.jpg",
+      "name": "BIỆT THỰ HƯỚNG VƯỜN CÓ HỒ BƠI RIÊNG",
+      "poolArea": 60,
+      "floor": 2,
+      "payment": 1000000
+    },
+    {
+      "id": 5,
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-F-370x239.jpg",
+      "name": "PHÒNG PRESIDENT SUITE",
+      "poolArea": 60,
+      "floor": 2,
+      "payment": 1000000
+    },
+    {
+      "id": 6,
+      "img": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-F-370x239.jpg",
+      "name": "PHÒNG DELUXE HƯỚNG VƯỜN",
+      "poolArea": 60,
+      "floor": 2,
+      "payment": 1000000
+    }
+  ]
+}

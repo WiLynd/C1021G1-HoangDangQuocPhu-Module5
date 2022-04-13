@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="thumbnail">
+    <h1>DANH SÁCH DỊCH VỤ</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-4 border border-5" *ngFor="let facility of facilities">
+      <img
+        src="{{facility.img}}"
+        class="card-img text-center" alt="...">
+      <p style="text-align: center"><strong>{{facility.name}}</strong></p>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary"
+                [routerLink]="['/facility-detail',facility.id]">Chi tiết
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

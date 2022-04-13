@@ -1,0 +1,90 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <form [formGroup]="facilityForm" class="form-control form-label">
+        <table class="table">
+          <thead>
+          <th colspan="2" class="text-center"><h2>Chỉnh sửa dịch vụ</h2>
+          </th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>ID</td>
+            <td>
+              <input class="form-control" type="number" formControlName="id">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="facilityForm.get('id').invalid && facilityForm.get('id').touched">
+                ID ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Tên dịch vụ</td>
+            <td>
+              <input class="form-control" type="text" formControlName="name">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="facilityForm.get('name').invalid && facilityForm.get('name').touched">
+                Tên ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Link ảnh</td>
+            <td>
+              <input class="form-control" type="text" formControlName="img">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="facilityForm.get('img').invalid && facilityForm.get('img').touched">
+                Link ảnh ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Diện tích hồ bơi</td>
+            <td>
+              <input class="form-control" type="number" formControlName="poolArea">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="facilityForm.get('poolArea').invalid && facilityForm.get('poolArea').touched">
+                Diện tích ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Số tầng</td>
+            <td>
+              <input class="form-control" type="number" formControlName="floor">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="facilityForm.get('floor').invalid && facilityForm.get('floor').touched">
+                Số tầng ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Giá tiền</td>
+            <td>
+              <input class="form-control" type="number" formControlName="payment">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="facilityForm.get('payment').invalid && facilityForm.get('payment').touched">
+                Giá tiền ko hợp lệ
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-center" colspan="2">
+              <button type="button" class="btn btn-secondary" routerLink="/facility-list">Cancel</button>
+              <button type="button" class="btn btn-primary"
+                      (click)="editFacility(id)" routerLink="/facility-list">Edit</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>

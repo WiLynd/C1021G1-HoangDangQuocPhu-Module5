@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <form [formGroup]="customerForm" class="form-control form-label">
+        <table class="table">
+          <thead>
+          <th colspan="2"><h2>Thêm mới khách hàng</h2></th>
+          </thead>
+          <tbody>
+          <tr class="text-end">
+            <td>ID</td>
+            <td>
+              <input class="form-control" type="number" formControlName="id">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('id').invalid && customerForm.get('id').touched">
+                ID ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>Mã khách hàng</td>
+            <td>
+              <input class="form-control" type="text" formControlName="code">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('code').invalid && customerForm.get('code').touched">
+                Mã khách hàng ko hợp lệ (KH-XXXX)
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>Tên khách hàng</td>
+            <td>
+              <input class="form-control" type="text" formControlName="name">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('name').invalid && customerForm.get('name').touched">
+                Tên không hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>Ngày sinh</td>
+            <td>
+              <input class="form-control" type="date" formControlName="birthday">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('birthday').invalid && customerForm.get('birthday').touched">
+                Ngày sinh ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>CMND</td>
+            <td>
+              <input class="form-control" type="number" formControlName="idCard">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('idCard').invalid && customerForm.get('idCard').touched">
+                CMND ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>Số điện thoại</td>
+            <td>
+              <input class="form-control" type="text" formControlName="phone">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('phone').invalid && customerForm.get('phone').touched">
+                Số điện thoại ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>Email</td>
+            <td>
+              <input class="form-control" type="email" formControlName="email">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('email').invalid && customerForm.get('email').touched">
+                Email ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-end">
+            <td>Địa chỉ</td>
+            <td>
+              <input class="form-control" type="text" formControlName="address">
+              <p class="form-control alert-danger" role="alert"
+                 *ngIf="customerForm.get('address').invalid && customerForm.get('address').touched">
+                Địa chỉ ko được để trống
+              </p>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td colspan="2">
+              <button type="button" class="m-2 btn btn-secondary" routerLink="/customer-list">Huỷ</button>
+              <button type="button" class="m-2 btn btn-success" [disabled]="customerForm.invalid"
+                      (click)="addCustomer()" routerLink="/customer-list">Thêm
+              </button>
+            </td>
+          </tr>
+          <p>{{customerForm.status}}</p>
+          </tbody>
+        </table>
+      </form>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

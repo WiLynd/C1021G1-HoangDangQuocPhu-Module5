@@ -1,0 +1,46 @@
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+  <th colspan="2">Thông tin khách hàng</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="text-end">ID</td>
+    <td class="text-end">{{data.customer.id}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">Mã khách hàng</td>
+    <td class="text-end">{{data.customer.code}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">Tên khách hàng</td>
+    <td class="text-end">{{data.customer.name}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">Ngày sinh</td>
+    <td class="text-end">{{data.customer.birthday}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">CMND</td>
+    <td class="text-end">{{data.customer.idCard}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">Số điện thoại</td>
+    <td class="text-end">{{data.customer.phone}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">Email</td>
+    <td class="text-end">{{data.customer.email}}</td>
+  </tr>
+  <tr>
+    <td class="text-end">Địa chỉ</td>
+    <td class="text-end">{{data.customer.address}}</td>
+  </tr>
+  <tr>
+    <td class="text-center" colspan="2">
+      <button class="m-2 btn btn-secondary" (click)="onNoClick()">Huỷ</button>
+      <button class="m-2 btn btn-success" (click)="updateCustomer(data.customer.id)">Sửa</button>
+      <button class="m-2 btn btn-danger" (click)="deleteCustomer()">Xoá</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

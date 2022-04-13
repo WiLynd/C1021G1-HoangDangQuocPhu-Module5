@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <h1>DANH SÁCH HỢP ĐỒNG</h1>
+  <table class="table table-striped table-hover table-bordered">
+    <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Name Customer</th>
+      <th>Name Contract</th>
+      <th>Start Day</th>
+      <th>End Day</th>
+      <th>Prepayment Money</th>
+    </tr>
+    </thead>
+  <tbody>
+  <tr *ngFor="let contract of contracts">
+    <td class="text-end">{{contract.id}}</td>
+    <td class="text-start">{{contract.customerName}}</td>
+    <td class="text-start">{{contract.facilityName}}</td>
+    <td class="text-end">{{contract.startDay}}</td>
+    <td class="text-end">{{contract.endDay}}</td>
+    <td class="text-end">{{contract.prePayment}}</td>
+  </tr>
+  </tbody>
+  </table>
+</div>

@@ -1,0 +1,100 @@
+<div class="container-fluid">
+  <div class="row">
+      <form [formGroup]="customerForm" class="form-control form-label">
+        <table class="table">
+          <thead>
+          <th colspan="2"><h2>Chỉnh sửa khách hàng</h2></th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>ID</td>
+            <td>
+              <input class="form-control" type="number" formControlName="id">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('id').invalid && customerForm.get('id').touched">
+                ID ko hợp lệ
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Mã khách hàng</td>
+            <td>
+              <input class="form-control" type="text" formControlName="code">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('code').invalid && customerForm.get('code').touched">
+                Mã khách hàng ko hợp lệ (KH-XXXX)
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Tên khách hàng</td>
+            <td>
+              <input class="form-control" type="text" formControlName="name">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('name').invalid && customerForm.get('name').touched">
+                Tên ko hợp lệ
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Ngày sinh</td>
+            <td>
+              <input class="form-control" type="date" formControlName="birthday">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('birthday').invalid && customerForm.get('birthday').touched">
+                Ngày sinh ko hợp lệ
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>CMND</td>
+            <td>
+              <input class="form-control" type="number" formControlName="idCard">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('idCard').invalid && customerForm.get('idCard').touched">
+                CMND ko hợp lệ
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Số điện thoại</td>
+            <td>
+              <input class="form-control" type="text" formControlName="phone">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('phone').invalid && customerForm.get('phone').touched">
+                Số điện thoại ko hợp lệ
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>
+              <input class="form-control" type="email" formControlName="email">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('email').invalid && customerForm.get('email').touched">
+                Email ko hợp lệ
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>Địa chỉ</td>
+            <td>
+              <input class="form-control" type="text" formControlName="address">
+              <p class="alert-danger"
+                 *ngIf="customerForm.get('address').invalid && customerForm.get('address').touched">
+                Địa chỉ ko được để trống
+              </p>
+            </td>
+          </tr>
+          <tr class="text-center">
+            <td colspan="2">
+              <button class="m-2 btn btn-secondary" (click)="onNoClick()">Huỷ</button>
+              <button class="m-2 btn btn-success" (click)="updateCustomer()">Sửa</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+</div>
